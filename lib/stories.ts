@@ -76,3 +76,8 @@ export function getAllStories(): Story[] {
 export function getStoryBySlug(slug: string): Story | undefined {
   return stories.find((s) => s.slug === slug);
 }
+
+// Backwards-compatible alias (voor bestaande imports)
+export function getStoriesSorted(): Story[] {
+  return getAllStories();
+}
