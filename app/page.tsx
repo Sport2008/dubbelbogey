@@ -53,16 +53,13 @@ export default function HomePage() {
       {/* SEO Section */}
       <section className="mb-16">
         <h2 className="text-2xl font-semibold mb-4">
-          Waarom DubbelBogey?
+          Golf blog voor mid handicappers in Nederland
         </h2>
         <p className="mb-4">
-          DubbelBogey.nl is een golf blog voor mid handicappers in Nederland.
-          Hier lees je herkenbare golfverhalen over frustratie, progressie,
-          humor en alles daartussen.
+          Ben je een mid handicap golfer en zoek je herkenbare verhalen? Of je nu speelt met handicap 12, 18 of 23 — de struggles zijn vaak hetzelfde: consistentie, course management, mentale focus en die ene bal die altijd nét verkeerd valt.
         </p>
         <p>
-          Geen tourspelers. Geen perfectie. Wel echte golfers die hun spel
-          proberen te verbeteren.
+          Op DubbelBogey.nl lees je eerlijke golfverhalen, inzichten en ervaringen die je helpen relativeren én verbeteren.
         </p>
       </section>
 
