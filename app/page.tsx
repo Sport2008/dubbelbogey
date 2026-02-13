@@ -109,7 +109,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* LATEST STORY (automatisch) */}
+        {/* NIEUWSTE VERHAAL (automatisch) */}
         {latest && (
           <section className="mt-16 rounded-3xl border border-black/10 bg-white/40 p-8">
             <p className="text-sm text-[#1f3a2d]/80">Nieuwste verhaal</p>
@@ -152,7 +152,7 @@ export default function HomePage() {
           </p>
         </section>
 
-        {/* SEO SECTION (long-form) */}
+        {/* SEO SECTION */}
         <section className="mt-16 rounded-3xl border border-black/10 bg-white/40 p-8">
           <h2 className="text-2xl font-semibold">
             Golfblog voor mid handicappers in Nederland
@@ -171,40 +171,6 @@ export default function HomePage() {
             discussie: les nemen, fitter worden, of gewoon nieuwe ballen kopen
             (alsof dat helpt).
           </p>
-
-          <div className="mt-6 grid gap-6 md:grid-cols-2">
-            <div>
-              <h3 className="text-lg font-semibold">Wat je hier krijgt</h3>
-              <ul className="mt-3 list-disc space-y-2 pl-5 text-[#1f3a2d]">
-                <li>Herkenbare golfverhalen met humor (en soms een lesje).</li>
-                <li>Praktische tips: course management, mindset, korte spel.</li>
-                <li>Geen elitair gedoe — wél eerlijk en bruikbaar.</li>
-                <li>Focus op Nederland: banen, rondes, mentaliteit.</li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-semibold">Snel beginnen</h3>
-              <p className="mt-3 text-[#1f3a2d]">Wil je meteen lezen?</p>
-              <div className="mt-3 flex flex-wrap gap-3">
-                <Link
-                  href="/verhalen"
-                  className="rounded-xl bg-black px-5 py-3 text-sm font-medium text-white hover:opacity-90"
-                >
-                  Alle golfverhalen
-                </Link>
-                <Link
-                  href="/over"
-                  className="rounded-xl border border-black/30 bg-white/50 px-5 py-3 text-sm font-medium text-black hover:bg-white/70"
-                >
-                  Wie zit hierachter?
-                </Link>
-              </div>
-              <p className="mt-4 text-sm text-[#1f3a2d]/80">
-                Bonus: je hoeft nergens een account te maken. Gewoon lezen.
-              </p>
-            </div>
-          </div>
         </section>
 
         {/* DISCOVER */}
