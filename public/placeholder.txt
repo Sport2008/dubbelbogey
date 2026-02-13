@@ -1,0 +1,1 @@
+(Deze file houdt de public-map zichtbaar in GitHub. Je mag hem later verwijderen als er echte assets in public staan.)
