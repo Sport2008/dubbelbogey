@@ -11,7 +11,7 @@ type Story = {
 
 const STORIES: Story[] = [
   {
-    slug: "eerste-ronde-met-vriendinnen-op-de-pan",
+    slug: "de-haar-eerste-ronde-met-vriendinnen",
     title: "Eerste ronde met vriendinnen op De Pan (en ik was weer mezelf)",
     date: "2026-02-13",
     intro:
