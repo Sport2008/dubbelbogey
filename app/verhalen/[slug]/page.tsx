@@ -12,12 +12,12 @@ type Story = {
 const STORIES: Story[] = [
   {
     slug: "de-haar-eerste-ronde-met-vriendinnen",
-    title: "Eerste ronde met vriendinnen op De Pan (en ik was weer mezelf)",
+    title: "Eerste ronde met vriendinnen op de Haar (en ik was weer mezelf)",
     date: "2026-02-13",
     intro:
       "Een onbekende baan, veel gezelligheid, en precies genoeg shanks om weer nederig te blijven.",
     content: [
-      "We hadden het plan al weken: met een paar vriendinnen een baan spelen die we nog niet kenden. Het werd De Pan in Bosch en Duin — chique naam, mooie bomen, en een sfeer alsof je spontaan netter moet gaan praten.",
+      "We hadden het plan al weken: met een paar vriendinnen een baan spelen die we nog niet kenden. Het werd de Haar in Haarzuilens — chique naam, mooie bomen, en een sfeer alsof je spontaan netter moet gaan praten.",
       "Ik had mezelf voorgenomen: vandaag gewoon rustig. Geen heldenslagen. Geen ‘ik kan dit wel over die boom heen’. Gewoon fairway, midden op de green, twee putts, klaar. Je raadt het al: op hole 1 voelde ik me meteen Rory… en sloeg ik iets dat het midden hield tussen een slice en een soort verdwaalde sneeuwworp.",
       "Maar eerlijk: de dag was zó leuk. Zonnetje, veel gelach, en niemand die deed alsof golf serieus moest zijn. Op een paar holes ging het zelfs best. Eén ijzer-7 die precies deed wat hij moest doen. En natuurlijk riep ik direct: ‘Zie je wel, het kán dus!’",
       "Daarna kwam de realiteit weer terug. Drie-putt hier, chip die nét te kort blijft daar. En toch—ik had nul frustratie. Want het was zo’n ronde waarin je beseft: ik ben niet op tour, ik ben gewoon iemand die graag golft en af en toe iets raakt dat lijkt op talent.",
