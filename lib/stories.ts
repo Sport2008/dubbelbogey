@@ -28,8 +28,6 @@ const stories: Story[] = [
       "Binnen eindigden we met iets warms, een beetje napraten en de standaard conclusie: volgende keer gaan we echt oefenen. (Spoiler: dat doen we niet.)",
     ],
   },
-
-  // Verhaal 2 (voorbeeld)
   {
     slug: "een-rondje-met-net-te-veel-zelfvertrouwen",
     title: "Een rondje met net te veel zelfvertrouwen",
@@ -45,8 +43,6 @@ const stories: Story[] = [
       "Maar goed: het was buiten, het was gezellig, en ergens is dat ook gewoon winst.",
     ],
   },
-
-  // Verhaal 3 (voorbeeld wintergreens Gelderland)
   {
     slug: "wintergreens-en-warme-chocolademelk",
     title: "Wintergreens, koude handen en warme chocolademelk",
