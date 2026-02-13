@@ -4,6 +4,7 @@ import Link from "next/link";
 
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
+import { getStoriesSorted } from "@/lib/stories";
 
 const siteUrl = "https://dubbelbogey.nl";
 
@@ -33,6 +34,9 @@ export const metadata: Metadata = {
 };
 
 export default function HomePage() {
+  const stories = getStoriesSorted();
+  const latest = stories[0];
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebSite",
@@ -104,6 +108,34 @@ export default function HomePage() {
             </p>
           </div>
         </section>
+
+        {/* LATEST STORY (automatisch) */}
+        {latest && (
+          <section className="mt-16 rounded-3xl border border-black/10 bg-white/40 p-8">
+            <p className="text-sm text-[#1f3a2d]/80">Nieuwste verhaal</p>
+            <h2 className="mt-2 text-2xl font-semibold">{latest.title}</h2>
+            <p className="mt-2 text-sm text-[#1f3a2d]/80">
+              {latest.course} ({latest.province}) • {latest.date}
+            </p>
+            <p className="mt-4 max-w-3xl leading-relaxed text-[#1f3a2d]">
+              {latest.excerpt}
+            </p>
+            <div className="mt-6 flex flex-wrap gap-3">
+              <Link
+                href={`/verhalen/${latest.slug}`}
+                className="rounded-xl bg-black px-5 py-3 text-sm font-medium text-white hover:opacity-90"
+              >
+                Lees het nieuwste verhaal
+              </Link>
+              <Link
+                href="/verhalen"
+                className="rounded-xl border border-black/30 bg-white/50 px-5 py-3 text-sm font-medium text-black hover:bg-white/70"
+              >
+                Alle verhalen
+              </Link>
+            </div>
+          </section>
+        )}
 
         {/* WHY */}
         <section className="mt-16">
