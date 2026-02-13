@@ -1,88 +1,78 @@
 export type Story = {
   slug: string;
   title: string;
-  date: string; // YYYY-MM-DD
-  course: string;
-  province: string;
   excerpt: string;
+  date: string; // ISO string, bijv. "2026-02-10"
+  location?: string;
+  readingTime?: string; // bijv. "6 min"
   content: string[]; // paragrafen
 };
 
-export const stories: Story[] = [
- 
-  {
-  slug: "the-international-regen-en-een-par-die-ik-niet-verdien",
-  title: "The International: regen, modder en een par die ik niet verdien",
-  date: "2026-02-15",
-  course: "The International",
-  province: "Noord-Holland",
-  excerpt:
-    "Het regende horizontaal, mijn schoenen gaven het op, en toch speelde ik één hole alsof ik heel even wist wat ik deed. Dat ene moment is natuurlijk genoeg om weer terug te gaan.",
-  content: [
-    "Ik ga eerlijk zijn: ik had het weerbericht gezien en toch gedaan alsof het wel zou meevallen. Dat is dus mijn grootste talent in golf — optimisme op precies de verkeerde momenten.",
-    "We speelden op The International. Mooie baan, serieuze uitstraling, en het soort plek waar je automatisch rechter gaat lopen. Alsof je swing daar ook meteen beter van wordt. Spoiler: niet.",
-    "Vanaf hole 1 was het duidelijk: dit werd geen dag voor mooie scores. Dit werd een dag voor overleven. Regen in je gezicht, natte grips, en die wind die precies op het moment dat jij afslaat besluit dat hij ook ‘even mee wil doen’.",
-    "Mijn eerste drive was… oké. Niet goed, niet rampzalig. Het soort bal dat je ‘veilig’ noemt omdat je nog niet durft te zeggen dat je een slice hebt. Daarna kwam de modder. Overal. In je schoenen, op je broek, en waarschijnlijk ook in m’n ziel.",
-    "Het mooie van slecht weer is trouwens dat iedereen er ineens hetzelfde uitziet: niemand heeft nog een perfecte outfit, iedereen is chagrijnig, en elke bal die recht gaat voelt als een persoonlijke overwinning.",
-    "Rond hole 6 had ik zo’n moment waarop je jezelf toespreekt: ‘Rustig. Tempo. Gewoon de bal raken.’ En toen raakte ik ‘m dus net niet. Half top. Bal rolt twintig meter. Ik stond daar met een gezicht alsof ik net was verraden door mijn eigen club.",
-    "Maar toen… hole 9. Ik weet niet wat er gebeurde. Misschien was het toeval. Misschien was het karma. Misschien had ik gewoon eindelijk een goede timing. Drive midden fairway. Tweede slag netjes richting green. En toen: een putt die viel.",
-    "Par.",
-    "Ik keek om me heen alsof iemand me ging feliciteren met een trofee. Mijn speelmaatjes deden alsof het normaal was, maar ik zag het: ze wisten net zo goed als ik dat dit totaal niet in lijn was met de rest van mijn dag.",
-    "De back nine was weer gewoon DubbelBogey-waardig: drie-putts, een chip die te kort bleef, een bal die in een plas belandde, en een moment waarop ik serieus twijfelde of ik nog gevoel in mijn linkerhand had.",
-    "Maar toch: ik heb genoten. Niet van de regen, niet van de modder, maar van dat rare golfgevoel dat je krijgt als je samen door iets heen gaat. En van die ene par. Die ene par is natuurlijk genoeg om weer te denken: volgende keer wordt het beter.",
-    "Volgende keer neem ik alleen wél extra handschoenen mee. En droge sokken. Minstens drie paar.",
-  ],
-},
-
-  
-  
+const stories: Story[] = [
   {
     slug: "de-haar-eerste-ronde-met-vriendinnen",
-    title: "Golfbaan De Haar met vriendinnen: alles behalve strak, wél genoten",
-    date: "2026-02-13",
-    course: "Golfbaan De Haar",
-    province: "Utrecht",
+    title: "Haar eerste ronde met vriendinnen op De Haar",
     excerpt:
-      "Nieuwe baan, veel te veel optimisme, een paar misserfestivals… en toch weer precies waarom golf zo leuk is.",
+      "Een onbekende baan, een paar vriendinnen, winterlucht in de longen en toch vooral veel plezier — ondanks het scorekaartje.",
+    date: "2026-02-13",
+    location: "Golfclub De Haar (Utrecht)",
+    readingTime: "6 min",
     content: [
-      "We hadden het plan al weken: met een paar vriendinnen een baan spelen die we nog niet kenden. Het werd Golfbaan De Haar — mooi, rustig, en precies het soort plek waar je denkt: vandaag ga ik écht gewoon slim golfen.",
-      "Op de range voelde het nog best oké. Twee ballen recht, één bal ‘redelijk’, en toen besloot mijn brein dat ik er klaar voor was. Spoiler: ik was niet klaar.",
-      "Hole 1 begon met een afslag die zo hard naar rechts draaide dat ik even dacht dat de bal onderweg nog een afspraak had. Mijn vriendin riep: ‘Ik zag ’m nog!’ — dat was lief. Niet waar, maar lief.",
-      "En toch: het was meteen lekker. De baan lag er prachtig bij, het tempo was relaxed, en niemand deed alsof golf serieus móést zijn. Het werd al snel meer lachen dan rekenen.",
-      "Ik had ook zo’n moment waarop je weer gelooft dat je talent hebt: één ijzer-7 die precies deed wat hij moest doen. Bal op de green, twee putts, klaar. Ik keek om me heen alsof ik een major had gewonnen.",
-      "De holes erna waren weer gewoon ik: een duff, een chip die óf te kort was óf ineens over de green vloog alsof ik wél talent had. Het mooie is: je schaamt je even, maar daarna lach je en loop je door.",
-      "Halverwege kwamen de gesprekken. Niet over techniek, maar over alles. Werk, plannen, gedoe, vakantie. En natuurlijk: waarom we in hemelsnaam een sport hebben gekozen waarbij je de hele dag een klein wit balletje zoekt.",
-      "Laatste holes: geen focus op score, wel focus op ‘nog één goede slag’. Die kwam. Niet vaak. Maar genoeg om te denken: volgende keer wordt beter (klassieke leugen).",
-      "Conclusie: op De Haar kun je prima slecht spelen — zolang je maar goed gezelschap hebt. We gaan terug. Uiteraard met hetzelfde optimisme. En waarschijnlijk dezelfde shanks.",
+      "We hadden onszelf wijsgemaakt dat we ‘even een rondje’ gingen lopen. Gewoon lekker, beetje praten, beetje slaan, beetje genieten. Maar ja — dat zeggen mensen altijd voordat ze drie holes later al ruzie hebben met hun eigen swing.",
+      "Het was één van die ochtenden waarop je jas eigenlijk nog dicht moet, maar je tóch je polo aantrekt omdat je jezelf wijsmaakt dat het dan al lente wordt. We reden richting Golfclub De Haar, een baan waar we nog nooit gespeeld hadden. Nieuwe baan = nieuw excuus, vonden we.",
+      "Bij de eerste tee deden we alsof we er vaak kwamen. Beetje nonchalant kijken, tas neerzetten, praten over ‘course management’ alsof we ooit een plan hebben. En toen kwam natuurlijk de afslag.",
+      "Mijn eerste bal ging… laten we zeggen: niet richting waar de hole ongeveer was. Meer richting ‘spannende ontdekkingstocht door het bos’. Iedereen lachte. Ik ook. Nog.",
+      "Toch gebeurde er iets geks: tussen de slices en drie-putts door zat er af en toe ineens een bal tussen waarvan je denkt: oké, dáárom doe ik dit. Zo’n ijzer-7 die precies doet wat je in je hoofd hoorde. En dan loop je weer drie holes op adrenaline.",
+      "We speelden slecht, maar op een gezellige manier. Veel ‘nee joh, je ligt prima’ terwijl iemand letterlijk achter een boom ligt. Veel foto’s. Veel commentaar op elkaar. En vooral: nul stress.",
+      "En op het einde — toen de scores het niet meer waard waren om te tellen — liepen we de laatste holes gewoon uit alsof we op een mini-vakantie waren. Zonnetje, grapjes, en dat gevoel dat je de week weer even gereset hebt.",
+      "Binnen eindigden we met iets warms, een beetje napraten en de standaard conclusie: volgende keer gaan we echt oefenen. (Spoiler: dat doen we niet.)",
     ],
   },
 
+  // Verhaal 2 (voorbeeld)
   {
-    slug: "winterronde-op-de-scherpenbergh",
-    title: "Wintergreen op De Scherpenbergh: verkleumde vingers en warme chocolademelk",
-    date: "2026-01-23",
-    course: "Golfclub De Scherpenbergh",
-    province: "Gelderland",
+    slug: "een-rondje-met-net-te-veel-zelfvertrouwen",
+    title: "Een rondje met net te veel zelfvertrouwen",
     excerpt:
-      "Twee graden, wind, wintergreens… We wilden ‘gewoon even naar buiten’. Achteraf waren we vooral blij dat we weer binnen zaten.",
+      "Je kent het: je start met één mooie bal en denkt direct dat je ‘m hebt’ — tot hole 3 je weer terug op aarde zet.",
+    date: "2026-02-12",
+    location: "Utrecht",
+    readingTime: "5 min",
     content: [
-      "Drie weken geleden vonden we onszelf ontzettend stoer. Het was zo’n dag waarop iedereen normaal zegt: ‘Misschien toch maar niet vandaag.’ Twee graden, wind, half bevroren fairways — en wintergreens.",
-      "Maar wij wilden naar buiten. Want ‘frisse lucht is gezond’ en ‘het valt vast mee’. Het viel niet mee.",
-      "Op De Scherpenbergh zag het er prachtig uit: kale bomen, lage winterzon, zo’n stilte waardoor je denkt dat je de baan voor jezelf hebt. Alleen… na drie holes voelden mijn handen alsof ze officieel niet meer bij mijn lichaam hoorden.",
-      "Mijn eerste afslag ging verrassend goed. Midden fairway. Ik dacht: zie je wel, wintergolf is eigenlijk ideaal. Minder drukte. Meer focus. Twee holes later kon ik mijn tee niet eens meer uit de grond krijgen omdat mijn vingers niet meer wilden buigen.",
-      "En wintergreens zijn ook een ervaring. Je putt ziet er goed uit… en dan stuitert je bal alsof hij over een licht hobbelige parkeerplaats rolt. Iedereen doet alsof het normaal is, maar je voelt gewoon: dit is overleven.",
-      "We hebben serieus geprobeerd om competitief te blijven. Er werd zelfs nog gezegd: ‘Technisch gezien zijn de omstandigheden voor iedereen gelijk.’ Rond hole 6 was die motivatie dood. Niet het golfen — de kou.",
-      "Toch speelden we door. Omdat je het later graag stoer vertelt: ‘We hebben het gewoon gedaan.’ En eerlijk: het was ook mooi. Rustig. Stil. Bijna filmisch. Alleen dan met rillende kaken.",
-      "Het absolute hoogtepunt kwam niet op de baan, maar erna. Binnen. Jassen uit. Rode wangen. En een warme chocolademelk die ineens voelde als een Michelin-ervaring.",
-      "Conclusie: wintergolf is karaktervormend. Maar volgende keer wachten we gewoon tot het vijf graden warmer is.",
+      "Ik begon met één bal die zó goed was dat ik meteen gevaarlijke gedachten kreeg. Je weet wel: vandaag wordt een dag.",
+      "En precies daardoor werd het natuurlijk géén dag.",
+      "Hole 2 kwam met een drie-putt die me weer netjes terugzette in de categorie ‘mid handicapper met grootse dromen’.",
+      "Maar goed: het was buiten, het was gezellig, en ergens is dat ook gewoon winst.",
+    ],
+  },
+
+  // Verhaal 3 (voorbeeld wintergreens Gelderland)
+  {
+    slug: "wintergreens-en-warme-chocolademelk",
+    title: "Wintergreens, koude handen en warme chocolademelk",
+    excerpt:
+      "Drie weken geleden was het zó koud dat de bal bijna pijn deed. We speelden toch — en waren achteraf vooral blij met de warme choco.",
+    date: "2026-02-10",
+    location: "Gelderland",
+    readingTime: "6 min",
+    content: [
+      "Het was zo’n dag waarop je al spijt hebt als je de auto uitstapt. Koude lucht, stijve handen, en een baan die er prachtig uitzag maar eigenlijk één grote waarschuwing was.",
+      "We speelden op wintergreens. Omdat het ‘toch lekker was om buiten te zijn’. Dat is de leugen die golfers zichzelf vertellen als ze eigenlijk gewoon niet binnen willen blijven.",
+      "De eerste paar holes waren vooral overleven. Je swing is korter, je tempo is sneller, je voelt niks in je vingers. En je ballen… die doen ook niet wat ze normaal doen. (De ballen bedoel ik ja.)",
+      "Op een gegeven moment sloeg iemand een wedge die normaal landt en stopt — en nu rolde ‘ie gewoon door alsof de green van marmer was.",
+      "We hebben gelachen, we hebben gemopperd, we hebben minstens drie keer gezegd dat we beter koffie hadden kunnen drinken in plaats van golfen.",
+      "En toen we klaar waren, waren we eerlijk gezegd vooral trots dat we überhaupt doorgezet hadden. Binnen was het warm. We namen warme chocolademelk en deden alsof het een heroic adventure was.",
+      "Conclusie: wintergreens zijn prima… maar alleen als je daarna meteen iets warms drinkt en je scorekaartje direct weggooit.",
     ],
   },
 ];
 
-export function getStoriesSorted() {
-  return [...stories].sort((a, b) => (a.date < b.date ? 1 : -1));
+export function getAllStories(): Story[] {
+  return [...stories].sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+  );
 }
 
-export function getStoryBySlug(slug: string) {
+export function getStoryBySlug(slug: string): Story | undefined {
   return stories.find((s) => s.slug === slug);
 }
