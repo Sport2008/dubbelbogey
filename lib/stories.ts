@@ -51,7 +51,7 @@ const stories: Story[] = [
     title: "Wintergreens, koude handen en warme chocolademelk",
     excerpt:
       "Drie weken geleden was het zó koud dat de bal bijna pijn deed. We speelden toch — en waren achteraf vooral blij met de warme choco.",
-    date: "2026-02-10",
+    date: "2026-02-15",
     course: "—",
     province: "Gelderland",
     readingTime: "6 min",
