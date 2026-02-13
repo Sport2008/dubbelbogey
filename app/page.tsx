@@ -1,102 +1,205 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
+import { SiteHeader } from "@/components/SiteHeader";
+import { SiteFooter } from "@/components/SiteFooter";
+
+const siteUrl = "https://dubbelbogey.nl";
+
 export const metadata: Metadata = {
-  title: "Golfverhalen voor mid handicappers | DubbelBogey.nl",
+  metadataBase: new URL(siteUrl),
+  title: "DubbelBogey.nl — golfverhalen voor mid-handicappers",
   description:
-    "Eerlijke en herkenbare golfverhalen voor mid handicappers. Geen perfecte rondes, wel echte momenten vanaf de baan.",
+    "Geen perfecte rondes. Geen Instagram-golf. Wel eerlijke golfverhalen, tips en herkenbare momenten voor mid-handicappers in Nederland.",
+  alternates: { canonical: "/" },
   openGraph: {
-    title: "Golfverhalen voor mid handicappers | DubbelBogey.nl",
+    title: "DubbelBogey.nl — golfverhalen voor mid-handicappers",
     description:
-      "Herkenbare golfverhalen voor mid handicappers. Golf zoals het écht is.",
-    url: "https://dubbelbogey.nl",
+      "Eerlijke verhalen, tips en humor voor golfers die nét niet op tour spelen (maar wel elke week proberen).",
+    url: siteUrl,
     siteName: "DubbelBogey.nl",
-    locale: "nl_NL",
     type: "website",
+    locale: "nl_NL",
+    images: [{ url: "/hero-golf.svg", alt: "DubbelBogey.nl" }],
   },
-  alternates: {
-    canonical: "https://dubbelbogey.nl",
+  twitter: {
+    card: "summary_large_image",
+    title: "DubbelBogey.nl — golfverhalen voor mid-handicappers",
+    description:
+      "Eerlijke golfverhalen en tips voor mid-handicappers in Nederland.",
+    images: ["/hero-golf.svg"],
   },
 };
 
 export default function HomePage() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "DubbelBogey.nl",
+    url: siteUrl,
+    inLanguage: "nl-NL",
+    description:
+      "Golfverhalen, tips en herkenbare momenten voor mid-handicappers in Nederland.",
+    potentialAction: {
+      "@type": "SearchAction",
+      target: `${siteUrl}/verhalen?q={search_term_string}`,
+      "query-input": "required name=search_term_string",
+    },
+  };
+
   return (
-    <main className="min-h-screen px-6 py-16 max-w-4xl mx-auto">
-      {/* H1 */}
-      <h1 className="text-4xl font-bold mb-6">
-        Golfverhalen voor mid handicappers
-      </h1>
+    <div className="min-h-screen bg-[#f7f4ec] text-[#0f2a1d]">
+      <SiteHeader />
 
-      {/* Intro */}
-      <p className="text-lg mb-8">
-        Geen perfecte rondes. Geen Instagram-golf. 
-        Gewoon eerlijke golfverhalen voor mid handicappers die zichzelf 
-        herkennen in een slice, een drie-putt en af en toe een briljante slag.
-      </p>
+      <main className="mx-auto max-w-5xl px-6 pb-16 pt-14">
+        {/* HERO */}
+        <section className="grid gap-10 md:grid-cols-2 md:items-center">
+          <div>
+            <h1 className="text-4xl font-semibold leading-tight md:text-5xl">
+              Golfverhalen voor mid handicappers
+            </h1>
 
-      {/* CTA */}
-      <div className="flex gap-4 mb-16">
-        <Link
-          href="/verhalen"
-          className="bg-black text-white px-6 py-3 rounded-lg"
-        >
-          Bekijk de verhalen
-        </Link>
-        <Link
-          href="/over"
-          className="border border-black px-6 py-3 rounded-lg"
-        >
-          Over DubbelBogey
-        </Link>
-      </div>
+            <p className="mt-5 text-lg leading-relaxed text-[#1f3a2d]">
+              Geen perfecte rondes. Geen Instagram-golf. Gewoon eerlijke
+              golfverhalen voor mid handicappers die zichzelf herkennen in een
+              slice, een drie-putt en af en toe een briljante slag.
+            </p>
 
-      {/* SEO Section */}
-      <section className="mb-16">
-        <h2 className="text-2xl font-semibold mb-4">
-          Golf blog voor mid handicappers in Nederland
-        </h2>
-        <p className="mb-4">
-          Ben je een mid handicap golfer en zoek je herkenbare verhalen? Of je nu speelt met handicap 12, 18 of 23 — de struggles zijn vaak hetzelfde: consistentie, course management, mentale focus en die ene bal die altijd nét verkeerd valt.
-        </p>
-        <p>
-          Op DubbelBogey.nl lees je eerlijke golfverhalen, inzichten en ervaringen die je helpen relativeren én verbeteren.
-        </p>
-      </section>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Link
+                href="/verhalen"
+                className="inline-flex items-center justify-center rounded-xl bg-black px-6 py-3 text-sm font-medium text-white hover:opacity-90"
+              >
+                Bekijk de verhalen
+              </Link>
 
-      {/* Interne linking */}
-      <section>
-        <h2 className="text-2xl font-semibold mb-4">
-          Ontdek meer golfverhalen
-        </h2>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>
-            <Link href="/verhalen">
-              Alle golfverhalen bekijken
-            </Link>
-          </li>
-          <li>
-            <Link href="/over">
-              Over deze golf blog
-            </Link>
-          </li>
-        </ul>
-      </section>
+              <Link
+                href="/over"
+                className="inline-flex items-center justify-center rounded-xl border border-black/30 bg-white/40 px-6 py-3 text-sm font-medium text-black hover:bg-white/60"
+              >
+                Over DubbelBogey
+              </Link>
+            </div>
 
-      {/* Structured data */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Blog",
-            name: "DubbelBogey.nl",
-            url: "https://dubbelbogey.nl",
-            description:
-              "Golfverhalen voor mid handicappers in Nederland.",
-            inLanguage: "nl-NL",
-          }),
-        }}
-      />
-    </main>
+            <p className="mt-4 text-sm text-[#1f3a2d]/80">
+              Nieuwe stukken komen rustig binnen. Geen spam. Geen gedoe.
+            </p>
+          </div>
+
+          <div className="relative">
+            <div className="overflow-hidden rounded-3xl border border-black/10 bg-white/40 shadow-sm">
+              <Image
+                src="/hero-golf.svg"
+                alt="Illustratie: golf met een knipoog"
+                width={900}
+                height={700}
+                priority
+                className="h-auto w-full"
+              />
+            </div>
+            <p className="mt-3 text-xs text-[#1f3a2d]/70">
+              Tip: vervang dit later door een eigen foto/visual (zelfde
+              bestandsnaam houden = klaar).
+            </p>
+          </div>
+        </section>
+
+        {/* WHY */}
+        <section className="mt-16">
+          <h2 className="text-3xl font-semibold">Waarom DubbelBogey?</h2>
+          <p className="mt-4 max-w-3xl text-base leading-relaxed text-[#1f3a2d]">
+            DubbelBogey.nl is een golf blog voor mid handicappers in Nederland.
+            Hier lees je herkenbare golfverhalen over frustratie, progressie,
+            humor en alles daartussen.
+          </p>
+          <p className="mt-4 max-w-3xl text-base leading-relaxed text-[#1f3a2d]">
+            Geen tourspelers. Geen perfectie. Wel echte golfers die hun spel
+            proberen te verbeteren — en ondertussen ook gewoon willen lachen om
+            hun eigen ellende.
+          </p>
+        </section>
+
+        {/* SEO SECTION (long-form) */}
+        <section className="mt-16 rounded-3xl border border-black/10 bg-white/40 p-8">
+          <h2 className="text-2xl font-semibold">
+            Golfblog voor mid handicappers in Nederland
+          </h2>
+
+          <p className="mt-4 leading-relaxed text-[#1f3a2d]">
+            Ben je ergens tussen “ik kan best golfen” en “waarom doe ik mezelf
+            dit aan” beland? Dan zit je goed. DubbelBogey.nl is er voor golfers
+            met een mid handicap die vooral beter willen worden, maar óók gewoon
+            realistisch blijven.
+          </p>
+
+          <p className="mt-4 leading-relaxed text-[#1f3a2d]">
+            Je vindt hier verhalen die je herkent: die ene hole waar alles ineens
+            klikt, de week erna weer een topdag met drie shanks, en de eeuwige
+            discussie: les nemen, fitter worden, of gewoon nieuwe ballen kopen
+            (alsof dat helpt).
+          </p>
+
+          <div className="mt-6 grid gap-6 md:grid-cols-2">
+            <div>
+              <h3 className="text-lg font-semibold">Wat je hier krijgt</h3>
+              <ul className="mt-3 list-disc space-y-2 pl-5 text-[#1f3a2d]">
+                <li>Herkenbare golfverhalen met humor (en soms een lesje).</li>
+                <li>Praktische tips: course management, mindset, korte spel.</li>
+                <li>Geen elitair gedoe — wél eerlijk en bruikbaar.</li>
+                <li>Focus op Nederland: banen, rondes, mentaliteit.</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-semibold">Snel beginnen</h3>
+              <p className="mt-3 text-[#1f3a2d]">Wil je meteen lezen?</p>
+              <div className="mt-3 flex flex-wrap gap-3">
+                <Link
+                  href="/verhalen"
+                  className="rounded-xl bg-black px-5 py-3 text-sm font-medium text-white hover:opacity-90"
+                >
+                  Alle golfverhalen
+                </Link>
+                <Link
+                  href="/over"
+                  className="rounded-xl border border-black/30 bg-white/50 px-5 py-3 text-sm font-medium text-black hover:bg-white/70"
+                >
+                  Wie zit hierachter?
+                </Link>
+              </div>
+              <p className="mt-4 text-sm text-[#1f3a2d]/80">
+                Bonus: je hoeft nergens een account te maken. Gewoon lezen.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* DISCOVER */}
+        <section className="mt-16">
+          <h2 className="text-3xl font-semibold">Ontdek meer golfverhalen</h2>
+          <ul className="mt-6 space-y-2 text-[#1f3a2d]">
+            <li>
+              <Link className="underline underline-offset-4" href="/verhalen">
+                Alle golfverhalen bekijken
+              </Link>
+            </li>
+            <li>
+              <Link className="underline underline-offset-4" href="/over">
+                Over deze golf blog
+              </Link>
+            </li>
+          </ul>
+        </section>
+
+        {/* JSON-LD */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </main>
+
+      <SiteFooter />
+    </div>
   );
 }
