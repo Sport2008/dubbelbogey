@@ -1,21 +1,34 @@
-import { SiteHeader } from "@/components/SiteHeader";
-import { SiteFooter } from "@/components/SiteFooter";
+import Link from "next/link";
+import fs from "fs";
+import path from "path";
 
 export const metadata = {
-  title: "Verhalen | DubbelBogey",
+  title: "Golfverhalen voor mid-handicappers | DubbelBogey",
+  description:
+    "Eerlijke golfverhalen voor mid-handicappers in Nederland. Slice, drie-putt en af en toe een briljante slag.",
 };
 
 export default function VerhalenPage() {
+  const verhalenDir = path.join(process.cwd(), "app/verhalen");
+  const items = fs
+    .readdirSync(verhalenDir)
+    .filter((item) => item !== "page.tsx");
+
   return (
-    <div className="min-h-screen">
-      <SiteHeader />
-      <main className="max-w-5xl mx-auto px-6 py-14">
-        <h1 className="text-3xl font-semibold">Verhalen</h1>
-        <p className="mt-4 text-neutral-700 max-w-2xl">
-          Placeholder voor golfverhalen en artikelen.
-        </p>
-      </main>
-      <SiteFooter />
-    </div>
+    <main className="mx-auto max-w-4xl px-6 py-16">
+      <h1 className="text-4xl font-semibold">Golfverhalen</h1>
+
+      <div className="mt-10 space-y-4">
+        {items.map((slug) => (
+          <Link
+            key={slug}
+            href={`/verhalen/${slug}`}
+            className="block rounded-lg border p-6 hover:bg-neutral-50"
+          >
+            {slug.replace(/-/g, " ")}
+          </Link>
+        ))}
+      </div>
+    </main>
   );
 }
