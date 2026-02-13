@@ -13,7 +13,7 @@ export const stories: Story[] = [
   {
   slug: "the-international-regen-en-een-par-die-ik-niet-verdien",
   title: "The International: regen, modder en een par die ik niet verdien",
-  date: "2026-02-06",
+  date: "2026-02-15",
   course: "The International",
   province: "Noord-Holland",
   excerpt:
