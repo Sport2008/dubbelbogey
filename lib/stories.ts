@@ -2,9 +2,10 @@ export type Story = {
   slug: string;
   title: string;
   excerpt: string;
-  date: string; // ISO string, bijv. "2026-02-10"
-  location?: string;
-  readingTime?: string; // bijv. "6 min"
+  date: string; // ISO "YYYY-MM-DD"
+  course: string; // golfbaan naam
+  province: string; // bijv. "Utrecht"
+  readingTime?: string;
   content: string[]; // paragrafen
 };
 
@@ -15,7 +16,8 @@ const stories: Story[] = [
     excerpt:
       "Een onbekende baan, een paar vriendinnen, winterlucht in de longen en toch vooral veel plezier — ondanks het scorekaartje.",
     date: "2026-02-13",
-    location: "Golfclub De Haar (Utrecht)",
+    course: "Golfclub De Haar",
+    province: "Utrecht",
     readingTime: "6 min",
     content: [
       "We hadden onszelf wijsgemaakt dat we ‘even een rondje’ gingen lopen. Gewoon lekker, beetje praten, beetje slaan, beetje genieten. Maar ja — dat zeggen mensen altijd voordat ze drie holes later al ruzie hebben met hun eigen swing.",
@@ -34,7 +36,8 @@ const stories: Story[] = [
     excerpt:
       "Je kent het: je start met één mooie bal en denkt direct dat je ‘m hebt’ — tot hole 3 je weer terug op aarde zet.",
     date: "2026-02-12",
-    location: "Utrecht",
+    course: "—",
+    province: "Utrecht",
     readingTime: "5 min",
     content: [
       "Ik begon met één bal die zó goed was dat ik meteen gevaarlijke gedachten kreeg. Je weet wel: vandaag wordt een dag.",
@@ -49,16 +52,14 @@ const stories: Story[] = [
     excerpt:
       "Drie weken geleden was het zó koud dat de bal bijna pijn deed. We speelden toch — en waren achteraf vooral blij met de warme choco.",
     date: "2026-02-10",
-    location: "Gelderland",
+    course: "—",
+    province: "Gelderland",
     readingTime: "6 min",
     content: [
       "Het was zo’n dag waarop je al spijt hebt als je de auto uitstapt. Koude lucht, stijve handen, en een baan die er prachtig uitzag maar eigenlijk één grote waarschuwing was.",
       "We speelden op wintergreens. Omdat het ‘toch lekker was om buiten te zijn’. Dat is de leugen die golfers zichzelf vertellen als ze eigenlijk gewoon niet binnen willen blijven.",
-      "De eerste paar holes waren vooral overleven. Je swing is korter, je tempo is sneller, je voelt niks in je vingers. En je ballen… die doen ook niet wat ze normaal doen. (De ballen bedoel ik ja.)",
-      "Op een gegeven moment sloeg iemand een wedge die normaal landt en stopt — en nu rolde ‘ie gewoon door alsof de green van marmer was.",
-      "We hebben gelachen, we hebben gemopperd, we hebben minstens drie keer gezegd dat we beter koffie hadden kunnen drinken in plaats van golfen.",
+      "De eerste paar holes waren vooral overleven. Je swing is korter, je tempo is sneller, je voelt niks in je vingers.",
       "En toen we klaar waren, waren we eerlijk gezegd vooral trots dat we überhaupt doorgezet hadden. Binnen was het warm. We namen warme chocolademelk en deden alsof het een heroic adventure was.",
-      "Conclusie: wintergreens zijn prima… maar alleen als je daarna meteen iets warms drinkt en je scorekaartje direct weggooit.",
     ],
   },
 ];
