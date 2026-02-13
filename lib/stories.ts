@@ -9,6 +9,33 @@ export type Story = {
 };
 
 export const stories: Story[] = [
+ 
+  {
+  slug: "the-international-regen-en-een-par-die-ik-niet-verdien",
+  title: "The International: regen, modder en een par die ik niet verdien",
+  date: "2026-02-06",
+  course: "The International",
+  province: "Noord-Holland",
+  excerpt:
+    "Het regende horizontaal, mijn schoenen gaven het op, en toch speelde ik één hole alsof ik heel even wist wat ik deed. Dat ene moment is natuurlijk genoeg om weer terug te gaan.",
+  content: [
+    "Ik ga eerlijk zijn: ik had het weerbericht gezien en toch gedaan alsof het wel zou meevallen. Dat is dus mijn grootste talent in golf — optimisme op precies de verkeerde momenten.",
+    "We speelden op The International. Mooie baan, serieuze uitstraling, en het soort plek waar je automatisch rechter gaat lopen. Alsof je swing daar ook meteen beter van wordt. Spoiler: niet.",
+    "Vanaf hole 1 was het duidelijk: dit werd geen dag voor mooie scores. Dit werd een dag voor overleven. Regen in je gezicht, natte grips, en die wind die precies op het moment dat jij afslaat besluit dat hij ook ‘even mee wil doen’.",
+    "Mijn eerste drive was… oké. Niet goed, niet rampzalig. Het soort bal dat je ‘veilig’ noemt omdat je nog niet durft te zeggen dat je een slice hebt. Daarna kwam de modder. Overal. In je schoenen, op je broek, en waarschijnlijk ook in m’n ziel.",
+    "Het mooie van slecht weer is trouwens dat iedereen er ineens hetzelfde uitziet: niemand heeft nog een perfecte outfit, iedereen is chagrijnig, en elke bal die recht gaat voelt als een persoonlijke overwinning.",
+    "Rond hole 6 had ik zo’n moment waarop je jezelf toespreekt: ‘Rustig. Tempo. Gewoon de bal raken.’ En toen raakte ik ‘m dus net niet. Half top. Bal rolt twintig meter. Ik stond daar met een gezicht alsof ik net was verraden door mijn eigen club.",
+    "Maar toen… hole 9. Ik weet niet wat er gebeurde. Misschien was het toeval. Misschien was het karma. Misschien had ik gewoon eindelijk een goede timing. Drive midden fairway. Tweede slag netjes richting green. En toen: een putt die viel.",
+    "Par.",
+    "Ik keek om me heen alsof iemand me ging feliciteren met een trofee. Mijn speelmaatjes deden alsof het normaal was, maar ik zag het: ze wisten net zo goed als ik dat dit totaal niet in lijn was met de rest van mijn dag.",
+    "De back nine was weer gewoon DubbelBogey-waardig: drie-putts, een chip die te kort bleef, een bal die in een plas belandde, en een moment waarop ik serieus twijfelde of ik nog gevoel in mijn linkerhand had.",
+    "Maar toch: ik heb genoten. Niet van de regen, niet van de modder, maar van dat rare golfgevoel dat je krijgt als je samen door iets heen gaat. En van die ene par. Die ene par is natuurlijk genoeg om weer te denken: volgende keer wordt het beter.",
+    "Volgende keer neem ik alleen wél extra handschoenen mee. En droge sokken. Minstens drie paar.",
+  ],
+},
+
+  
+  
   {
     slug: "de-haar-eerste-ronde-met-vriendinnen",
     title: "Golfbaan De Haar met vriendinnen: alles behalve strak, wél genoten",
